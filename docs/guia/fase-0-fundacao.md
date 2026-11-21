@@ -396,7 +396,7 @@ class InfrastructureIntegrationTest extends IntegrationTest {
 
     @Test
     void appliesOutboxMigration() {
-        Integer applied = jdbc.sql("select count(*) from flyway_schema_history where version = '1' and success")
+        Integer applied = jdbc.sql("select count(*) from flyway_schema_history where version = '001' and success")
                 .query(Integer.class).single();
         String table = jdbc.sql("select to_regclass('public.event_publication')::text")
                 .query(String.class).single();

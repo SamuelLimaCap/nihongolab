@@ -11,7 +11,7 @@ Ao final, `git clone` + `.env` + um comando sobe Postgres e Redis; `./mvnw verif
 - Testes que cobrem: C01
 - Pronto quando: `git status` limpo depois do primeiro commit e `.env` ignorado.
 - Especialidade: devops
-- Status: pendente
+- Status: implementado
 
 ## Passo 2 — Postgres e Redis de desenvolvimento (S)
 - Objetivo: subir dependências locais com healthcheck.
@@ -20,7 +20,7 @@ Ao final, `git clone` + `.env` + um comando sobe Postgres e Redis; `./mvnw verif
 - Testes que cobrem: C02
 - Pronto quando: os dois serviços ficam `healthy`.
 - Especialidade: devops
-- Status: pendente
+- Status: implementado
 
 ## Passo 3 — Esqueleto do backend (M)
 - Objetivo: app Spring Boot que sobe, com os módulos vazios e a segurança mínima.
@@ -29,7 +29,7 @@ Ao final, `git clone` + `.env` + um comando sobe Postgres e Redis; `./mvnw verif
 - Testes que cobrem: C04, C05
 - Pronto quando: `./mvnw verify` passa.
 - Especialidade: backend
-- Status: pendente
+- Status: implementado
 
 ## Passo 4 — Outbox e base de teste de integração (S)
 - Objetivo: tabela do outbox via Flyway e base de teste com Postgres e Redis reais.
@@ -38,7 +38,7 @@ Ao final, `git clone` + `.env` + um comando sobe Postgres e Redis; `./mvnw verif
 - Testes que cobrem: C04, C05
 - Pronto quando: o teste de contexto sobe com os containers e o Flyway aplica a V001.
 - Especialidade: backend
-- Status: pendente
+- Status: implementado
 
 ## Passo 5 — Guardiões de arquitetura (M)
 - Objetivo: build falha se alguém quebrar as regras de camada ou de módulo.

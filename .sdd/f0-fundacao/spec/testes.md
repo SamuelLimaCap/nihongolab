@@ -3,7 +3,7 @@
 Fase de infraestrutura: parte dos cartões é verificação por comando (manual ou no CI), marcada como "Nível: comando".
 
 ### C01 — `.env` nunca vai para o git · RN-F0-03
-- [ ] escrito  - [ ] falhando antes  - [ ] verde
+- [x] escrito  - [ ] falhando antes  - [x] verde
 - Nível: comando
 - Dado: repo com `.gitignore` do passo 1 e um `.env` criado a partir do `.env.example`
 - Quando: `git check-ignore .env`
@@ -11,7 +11,7 @@ Fase de infraestrutura: parte dos cartões é verificação por comando (manual 
 - Origem: AGENTS.md (Config) e NFR-SEC-07
 
 ### C02 — Postgres e Redis sobem saudáveis e só em localhost · RN-F0-01
-- [ ] escrito  - [ ] falhando antes  - [ ] verde
+- [x] escrito  - [ ] falhando antes  - [x] verde
 - Nível: comando
 - Dado: `.env` copiado do exemplo
 - Quando: `docker compose --env-file .env -f infra/docker-compose.dev.yml up -d --wait`
@@ -39,15 +39,15 @@ Fase de infraestrutura: parte dos cartões é verificação por comando (manual 
 - Origem: critério de pronto do PLAN
 
 ### C04 — Contexto sobe com Postgres e Redis reais e aplica a V001 · RN-F0-02
-- [ ] escrito  - [ ] falhando antes  - [ ] verde
+- [x] escrito  - [ ] falhando antes  - [x] verde
 - Nível: integração (`IntegrationTest`)
 - Dado: Testcontainers com `postgres:16-alpine` e `redis:7-alpine`
 - Quando: o contexto Spring sobe
-- Então: `select count(*) from flyway_schema_history where version = '1' and success` devolve 1; `select to_regclass('public.event_publication')` não é nulo
+- Então: `select count(*) from flyway_schema_history where version = '001' and success` devolve 1; `select to_regclass('public.event_publication')` não é nulo
 - Origem: contrato.md → Migração; D-07
 
 ### C05 — Health aberto e resto fechado com 401 · contrato.md → Endpoints
-- [ ] escrito  - [ ] falhando antes  - [ ] verde
+- [x] escrito  - [ ] falhando antes  - [x] verde
 - Nível: integração (`IntegrationTest` com `TestRestTemplate` ou `MockMvc`)
 - Dado: nenhuma sessão
 - Quando: `GET /actuator/health` e `GET /api/qualquer-coisa`
