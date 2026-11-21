@@ -56,7 +56,7 @@ Ao final, `git clone` + `.env` + um comando sobe Postgres e Redis; `./mvnw verif
 - Testes que cobrem: C07, C08
 - Pronto quando: `npm test -- --watch=false` e `npm run build` passam.
 - Especialidade: frontend
-- Status: pendente
+- Status: implementado
 
 ## Passo 7 — CI (S)
 - Objetivo: todo push e PR roda os testes do back e do front.

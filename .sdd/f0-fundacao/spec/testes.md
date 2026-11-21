@@ -63,7 +63,7 @@ Fase de infraestrutura: parte dos cartões é verificação por comando (manual 
 - Origem: AGENTS.md → Regras de dependência
 
 ### C07 — App Angular mostra o nome do produto
-- [ ] escrito  - [ ] falhando antes  - [ ] verde
+- [x] escrito  - [ ] falhando antes  - [x] verde
 - Nível: componente (Vitest + TestBed)
 - Dado: `App` renderizado
 - Quando: o teste consulta o elemento `h1`
@@ -71,7 +71,7 @@ Fase de infraestrutura: parte dos cartões é verificação por comando (manual 
 - Origem: contrato.md → Frontend
 
 ### C08 — Build de produção do front
-- [ ] escrito  - [ ] falhando antes  - [ ] verde
+- [x] escrito  - [ ] falhando antes  - [x] verde
 - Nível: comando
 - Quando: `npm run build` em `frontend/`
 - Então: sai com 0 e gera `dist/frontend/browser/index.html`

@@ -8,7 +8,7 @@
 
 ## Voltar aqui
 
-Passos 1–5 implementados; C01–C06 verdes. Próximo: **passo 6** (esqueleto do frontend Angular), cartões C07 e C08. Pendências de processo: o **usuário** aprovar a spec (`status: aprovada`) e rodar `sdd_gate.py --congelar` com os testes de C03–C06.
+Passos 1–6 implementados; C01–C08 verdes. Próximo: **passo 7** (CI no GitHub Actions), cartão C09. Pendências de processo: o **usuário** aprovar a spec (`status: aprovada`) e rodar `sdd_gate.py --congelar` com os testes de C03–C06.
 
 ## Checklist
 
@@ -19,8 +19,8 @@ Passos 1–5 implementados; C01–C06 verdes. Próximo: **passo 6** (esqueleto d
 - [x] Perguntas P-F0-01 a P-F0-03 respondidas
 - [ ] Spec aprovada pelo usuário
 - [ ] Testes escritos e congelados
-- [x] Passos 1–5 implementados
-- [ ] Passos 6–8 implementados
+- [x] Passos 1–6 implementados
+- [ ] Passos 7–8 implementados
 - [ ] Validação PASS
 - [ ] CI verde e teste de arquitetura falha com import proibido (critério do PLAN)
 
@@ -45,3 +45,4 @@ Ver `spec/perguntas.md`.
 - 2026-11-21 · usuário + opencode/deepseek-v4.1-flash · implementar · passos 1–3 · monorepo, compose de dev e esqueleto do backend; `./mvnw verify` verde; commits 6681cf7, 3888772, ba89e95.
 - 2026-11-21 · usuário + opencode/deepseek-v4.1-flash · implementar · passo 4 · V001 + Testcontainers + C04/C05; 2 testes verdes; commit d1c6085.
 - 2026-11-21 · usuário + opencode/deepseek-v4.1-flash · implementar · passo 5 · ArchUnit + Modulith; fixtures em `archfixture` (fora do scan do Spring/Hibernate); C03, C03b e C06 verdes; 12 testes verdes.
+- 2026-11-21 · usuário + opencode/deepseek-v4.1-flash · implementar · passo 6 · frontend Angular 22, proxy e teste do `App`; C07/C08 verdes; commit 8fd14c2.
