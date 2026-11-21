@@ -1,0 +1,36 @@
+spring:
+  application:
+    name: nihongolab
+  jpa:
+    open-in-view: false
+    hibernate:
+      dll-auto: validate
+    flyway:
+      enabled: true
+    modulith:
+      events:
+        jdbc:
+          schema-initialization:
+            enabled: false
+        republish-outstanding-events-on-restart: true
+    threads:
+      virtual:
+        enabled: true
+    mvc:
+      problemdetails:
+        enabled: true
+
+  management:
+    endpoints:
+      web:
+        exposure:
+          include:
+            health, info, prometheus
+    endpoint:
+      health:
+        show-details: never
+
+  logging:
+    structured:
+      format:
+        console: ecs
