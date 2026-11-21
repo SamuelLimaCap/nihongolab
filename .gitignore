@@ -1,0 +1,15 @@
+# segredos
+.env
+# Java
+# backend/target/
+*.class
+# Node / Angular
+frontend/node_modules/
+frontend/dist/
+frontend/.angular/
+# IDE / SO
+.idea/
+*.iml
+.vscode/*
+!.vscode/extensions.json
+.DS_Store
