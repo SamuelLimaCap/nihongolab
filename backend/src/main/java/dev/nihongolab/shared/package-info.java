@@ -1,4 +1,4 @@
-@ApplicationModule(displayName = "SRS", type = ApplicationModule.Type.OPEN)
+@ApplicationModule(displayName = "Shared Kernel", type = ApplicationModule.Type.OPEN)
 package dev.nihongolab.shared;
 
 

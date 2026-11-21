@@ -1,4 +1,4 @@
-@ApplicationModule(displayName = "SRS")
+@ApplicationModule(displayName = "Identity")
 package dev.nihongolab.identity;
 
 

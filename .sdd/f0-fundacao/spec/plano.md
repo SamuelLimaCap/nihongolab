@@ -47,7 +47,7 @@ Ao final, `git clone` + `.env` + um comando sobe Postgres e Redis; `./mvnw verif
 - Testes que cobrem: C03, C06
 - Pronto quando: as regras passam no código real e falham na fixture.
 - Especialidade: backend
-- Status: pendente
+- Status: implementado
 
 ## Passo 6 — Esqueleto do frontend (S)
 - Objetivo: app Angular 22 que compila, testa e encaminha `/api` para o backend.

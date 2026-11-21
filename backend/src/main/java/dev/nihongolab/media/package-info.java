@@ -1,4 +1,4 @@
-@ApplicationModule(displayName = "SRS")
+@ApplicationModule(displayName = "Media")
 package dev.nihongolab.media;
 
 

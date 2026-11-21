@@ -19,19 +19,19 @@ Fase de infraestrutura: parte dos cartões é verificação por comando (manual 
 - Origem: contrato.md → compose
 
 ### C03 — Cada regra de arquitetura falha na sua fixture · RN-F0-07, RN-F0-08, RN-F0-09, RN-F0-11
-- [ ] escrito  - [ ] falhando antes  - [ ] verde
+- [x] escrito  - [ ] falhando antes  - [x] verde
 - Nível: unidade (ArchUnit)
-- Dado: fixtures em `src/test/java/dev/nihongolab/archfixture/`:
+- Dado: fixtures em `src/test/java/archfixture/` (fora de `dev.nihongolab`, para o scan do Spring/Hibernate não capturá-las):
   - `srs/domain/SpringInDomain` com campo do tipo `org.springframework.context.ApplicationEventPublisher`
   - `srs/application/AdapterInApplication` com campo do tipo `archfixture.srs.adapter.out.persistence.SomeAdapter`
   - `srs/domain/MisplacedEntity` anotada com `@jakarta.persistence.Entity`
   - `srs/application/MisplacedController` anotada com `@RestController`
-- Quando: cada regra é checada contra `new ClassFileImporter().importPackages("dev.nihongolab.archfixture")`
+- Quando: cada regra é checada contra `new ClassFileImporter().importPackages("archfixture")`
 - Então: `DOMAIN_IS_PURE`, `APPLICATION_DOES_NOT_DEPEND_ON_ADAPTER`, `ENTITIES_ONLY_IN_PERSISTENCE_ADAPTER` e `CONTROLLERS_ONLY_IN_WEB_ADAPTER` lançam `AssertionError` cuja mensagem contém o nome simples da classe fixture correspondente
 - Origem: critério de pronto do PLAN ("o teste de arquitetura falha se você criar um import proibido")
 
 ### C03b — Import proibido no código real quebra o build · RN-F0-07
-- [ ] escrito  - [ ] falhando antes  - [ ] verde
+- [x] escrito  - [x] falhando antes  - [x] verde
 - Nível: comando (verificação manual, uma vez)
 - Dado: uma classe temporária `src/main/java/dev/nihongolab/srs/domain/Tmp.java` importando `org.springframework.stereotype.Component`
 - Quando: `./mvnw verify`
@@ -55,7 +55,7 @@ Fase de infraestrutura: parte dos cartões é verificação por comando (manual 
 - Origem: contrato.md → Endpoints; D-F0-05
 
 ### C06 — Estrutura modular válida · RN-F0-10
-- [ ] escrito  - [ ] falhando antes  - [ ] verde
+- [x] escrito  - [ ] falhando antes  - [x] verde
 - Nível: unidade (Spring Modulith)
 - Dado: os 6 pacotes de módulo com `package-info.java`
 - Quando: `ApplicationModules.of(NihongolabApplication.class).verify()`

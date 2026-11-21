@@ -479,10 +479,10 @@ class ArchitectureTest {
 }
 ```
 
-Fixtures (só em `src/test`), por exemplo `dev/nihongolab/archfixture/srs/domain/SpringInDomain.java`:
+Fixtures (só em `src/test`), por exemplo `archfixture/srs/domain/SpringInDomain.java` (pacote fora de `dev.nihongolab`, para o scan do Spring/Hibernate não capturá-las):
 
 ```java
-package dev.nihongolab.archfixture.srs.domain;
+package archfixture.srs.domain;
 
 import org.springframework.context.ApplicationEventPublisher;
 
@@ -498,7 +498,7 @@ Crie também `archfixture/srs/adapter/out/persistence/SomeAdapter`, `archfixture
 ```java
 class ArchitectureRulesSelfTest {
 
-    static final JavaClasses FIXTURES = new ClassFileImporter().importPackages("dev.nihongolab.archfixture");
+    static final JavaClasses FIXTURES = new ClassFileImporter().importPackages("archfixture");
 
     @Test
     void domainRuleCatchesSpringDependency() {
